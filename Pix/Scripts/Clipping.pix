@@ -1,0 +1,83 @@
+SetResolution(50, 50, 10, true)
+
+bool $showViewport = true
+bool $activateClipping = true
+
+SetViewport(10, 10, 30, 30)
+SetClipping($activateClipping)
+ShowViewport($showViewport)
+
+BeginDraw(point, false)
+Vertex(10, 10, 1, 0, 0)
+Vertex(40, 40, 1, 0, 0)
+
+Vertex(8, 17, 0, 1, 0)
+Vertex(9, 16, 0, 1, 0)
+Vertex(10, 15, 0, 1, 0)
+Vertex(11, 14, 0, 1, 0)
+Vertex(12, 13, 0, 1, 0)
+Vertex(13, 12, 0, 1, 0)
+Vertex(14, 11, 0, 1, 0)
+Vertex(15, 10, 0, 1, 0)
+Vertex(16, 9, 0, 1, 0)
+Vertex(17, 8, 0, 1, 0)
+EndDraw()
+
+float $v0x = 5, 1, 0, 50
+float $v0y = 16, 1, 0, 50
+float $v0r = 1, 0.01, 0, 1
+float $v0g = 0, 0.01, 0, 1
+float $v0b = 0, 0.01, 0, 1
+
+float $v1x = 25, 1, 0, 50
+float $v1y = 25, 1, 0, 50
+float $v1r = 0, 0.01, 0, 1
+float $v1g = 0, 0.01, 0, 1
+float $v1b = 1, 0.01, 0, 1
+
+BeginDraw(line, false)
+Vertex($v0x, $v0y, $v0r, $v0g, $v0b)
+Vertex($v1x, $v1y, $v1r, $v1g, $v1b)
+
+Vertex(15, 5, 1, 1, 0)
+Vertex(45, 20, 1, 0, 1)
+
+Vertex(45, 27, 0, 1, 1)
+Vertex(32, 45, 1, 1, 0)
+EndDraw()
+
+BeginDraw(triangle, false)
+SetFillMode(solid)
+
+float $v2x = 12, 1, 0, 50
+float $v2y = 20, 1, 0, 50
+float $v2r = 1, 0.01, 0, 1
+float $v2g = 0, 0.01, 0, 1
+float $v2b = 0, 0.01, 0, 1
+
+float $v3x = 23, 1, 0, 50
+float $v3y = 6, 1, 0, 50
+float $v3r = 0, 0.01, 0, 1
+float $v3g = 1, 0.01, 0, 1
+float $v3b = 0, 0.01, 0, 1
+
+float $v4x = 30, 1, 0, 50
+float $v4y = 20, 1, 0, 50
+float $v4r = 0, 0.01, 0, 1
+float $v4g = 0, 0.01, 0, 1
+float $v4b = 1, 0.01, 0, 1
+
+Vertex(15, 25, 1, 1, 0)
+Vertex(25, 43, 0, 1, 1)
+Vertex(5, 43, 1, 0, 1)
+
+Vertex(30, 20, 1, 0, 0)
+Vertex(48, 25, 0, 1, 0)
+Vertex(35, 33, 0, 0, 1)
+
+Vertex($v2x,$v2y, $v2r, $v2g, $v2b)
+Vertex($v3x,$v3y, $v3r, $v3g, $v3b)
+Vertex($v4x,$v4y, $v4r, $v4g, $v4b)
+EndDraw()
+
+
